@@ -22,19 +22,19 @@ const { Pet } = require('../models');
 const petData = [
     {
         id: 1,
-        name: "Liam",
-        image: "",
-        description: "furry",
-        breed: "Beagle",
+        name: "Bill",
+        image: "assets/Bill.png",
+        description: "Bill loves to cuddle and be petted",
+        breed: "Lab",
         age: 3,
         gender: "male",
         // user_id: 1
 
     },
     {
-        name: "Noel",
-        image: "",
-        description: "furry",
+        name: "Blue",
+        image: "assets/Blue.png",
+        description: "Blue likes to fetch tennis balls",
         breed: "Lab",
         age: 1,
         gender: "male",
@@ -42,15 +42,86 @@ const petData = [
 
     },
     {
-        name: "Liam",
-        image: "",
+        name: "Carly",
+        image: "assets/Carly.png",
         description: "furry",
-        breed: "Beagle",
+        breed: "Lab Mix",
         age: 3,
+        gender: "female",
+        // user_id: 1
+
+    },
+    {
+        name: "Champ",
+        image: "assets/Champ.png",
+        description: "Loves belly rubs and treats",
+        breed: "Lab Mix",
+        age: 3,
+        gender: "female",
+        // user_id: 1
+
+    },
+    {
+        name: "Charlie",
+        image: "assets/Charlie.png",
+        description: "Charlie will shake for treats",
+        breed: "Lab Mix",
+        age: 2,
         gender: "male",
         // user_id: 1
 
     },
+    {
+        name: "Mandy",
+        image: "assets/Mandy.png",
+        description: "fMandy was named after the Barry Manilow song",
+        breed: "Lab Mix",
+        age: 4,
+        gender: "female",
+        // user_id: 1
+
+    },
+    {
+        name: "Reggie",
+        image: "assets/Reggie.png",
+        description: "Reggie loves listening to Oasis music",
+        breed: "Lab Mix",
+        age: 5,
+        gender: "male",
+        // user_id: 1
+
+    },
+    {
+        name: "Ted",
+        image: "assets/Carly.png",
+        description: "Ted's full name is Ted 'Theodore' Logan",
+        breed: "Lab Mix",
+        age: 5,
+        gender: "male",
+        // user_id: 1
+
+    },
+    {
+        name: "Whispy",
+        image: "assets/Whispy.png",
+        description: "Whispy loves to eat and sleep",
+        breed: "Lab Mix",
+        age: 3,
+        gender: "female",
+        // user_id: 1
+
+    },
+    {
+        name: "Zoey",
+        image: "assets/Zoey.png",
+        description: "Zoey loves to snuggle and sleep under blankets",
+        breed: "Lab Mix",
+        age: 2,
+        gender: "female",
+        // user_id: 1
+
+    },
+
 
 ]
 
