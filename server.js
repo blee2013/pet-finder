@@ -30,7 +30,7 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/'));
+app.use(require('./Routes'));
 
 // turn on routes
 app.use(routes);
