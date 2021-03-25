@@ -1,24 +1,31 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Pet } = require('../models');
 const sequelize = require('../config/connection');
 
 
 router.get('/', (req, res) => {
   // console.log(req.session);
-  res.render('animals');
-  // Post.findAll({
-  
-  // })
-  //   .then(dbPostData => {
-      
-  //     const posts = dbPostData.map(post => post.get({ plain: true }));
-  //     res.render('animals');
+
+  Pet.findAll({
+   
+  })
+    .then(dbPetData => {
+      // console.log(bdPetData);
+      console.log('/animals route');
+      const pets = dbPetData.map(pet => pet.get({ plain: true }));
+      console.log(pets);
+      // res.render('animals', {pets: dbPetData, loggedIn: false});
+      res.render('animals', {pets, loggedIn: false});
      
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //     res.status(500).json(err);
-  //   });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
+
+
+
+

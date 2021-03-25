@@ -10,12 +10,12 @@ const signupRoutes = require('./signup-routes.js');
 
 
 
-router.use('/animals', animalRoutes);
-router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
+router.use('/animals', animalRoutes);
 router.use('/search', searchRoutes);
 router.use('/post', postRoutes);
 router.use('/signup', signupRoutes);
+router.use('/api', apiRoutes);
 
 
 

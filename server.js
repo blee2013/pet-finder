@@ -60,7 +60,8 @@ const PORT = process.env.PORT || 3001;
 
 const sequelize = require('./config/connection');
 
-
+// for file uploading image
+const fileupload = require('express-fileupload')
 
 const session = require('express-session');
 
@@ -81,6 +82,8 @@ const sess= {
     })
 };
 
+// for file uploading image
+app.use(fileupload())
 app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

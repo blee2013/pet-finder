@@ -112,10 +112,20 @@ input{
     width:100%;
     font-size:2rem;
 }
-#petCardsContainer {
-    margin-top:30rem;
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+#cardsCenter{
     display: flex;
     justify-content: space-evenly;
+}
+#petCardsContainer {
+    margin-top:30rem;
+    /* display: flex;
+    justify-content: center; */
 }
 
 #petCard {

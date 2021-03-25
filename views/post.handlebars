@@ -5,15 +5,15 @@
                 <div class="card-header bg-dark">
                     <h3><i class="fas fa-paw"></i> Post your pet</h3>
                 </div>
-                <form>
+                
 
                     <div>
                         <span>Pet Name</span>
-                        <input type="location" id="petName" />
+                        <input name="petName" type="location" id="petName" />
                     </div>
                     <div>
                         <span>Pet Breed</span>
-                        <input type="location" id="petBreed" />
+                        <input name="petBreed" type="location" id="petBreed" />
                     </div>
                     {{!-- <label for="petType">Choose a Pet Type</label>
                     <select name "petType" id="petType">
@@ -29,13 +29,13 @@
 
                     <div>
                         <p>Gender</p>
-                        <input type="location" id="petGender" />
+                        <input name="petGender" type="location" id="petGender" />
                     </div>
 
 
                     <div>
                         <p>Age</p>
-                         <input type="location" id="petAge" />
+                        <input name="petAge" type="location" id="petAge" />
                     </div>
 
                     {{!-- <label for="petAge">Choose an Age</label> --}}
@@ -56,21 +56,23 @@
                         <option value="14">14</option>
                         <option value="15">15</option>
                     </select> --}}
-                </form>
+                
 
                 <div>
                     <p>Tell us about your pet!</p>
-                    <textarea id="petDescription"></textarea>
+                    <textarea name="petDescription" id="petDescription"></textarea>
                 </div>
 
                 <form action="/action_page.php">
                     <label for="img">Upload an image</label>
-                    <input type="file" id="img" name="img" accept="image/*">
+                    <input type="file" id="fileUpload" name="img" accept="image/*">
                 </form>
                 <div>
                     <button class="btn btn-secondary" type="submit"><i class="fas fa-paw"></i> POST!</button>
                 </div>
             </div>
+        </form>
     </div>
-    </form>
 </div>
+
+<script src="/javascript/post.js"></script>
