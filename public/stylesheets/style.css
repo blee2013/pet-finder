@@ -18,8 +18,13 @@ body {
     
    
 }
+#foster {
+    display:flex;
+    justify-content: center;
+}
 
 #paragraph {
+
     margin-top:30rem;
 }
 

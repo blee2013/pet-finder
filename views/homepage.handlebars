@@ -1,6 +1,8 @@
-
 <div class="container">
     <div class="row" id="paragraph">
+        {{!-- <h1 id="foster">FOSTER FAMILIES NEEDED! <a href="mailto:fureverhome@gmail.com?&subject=Foster Family">
+                <br>
+                <i class="fas fa-paw"></i></a> CLICK TO HELP!</h1> --}}
         <div class="titleHeader">
             <h1><i class="fas fa-paw"></i> Searching for a new furry friend?</h1>
             <p>Check out <a href="/animals">OUR ANIMALS</a> link to find your new best friend!</p>
@@ -41,6 +43,16 @@
         </div>
     </div>
 </div>
+
+<form action="/uploadProfilePicture" enctype="multipart/form-data" method="POST">
+
+    <span>Upload Picture</span>
+    <input type="file" name="mypic" required />
+    <br>
+    <input type="submit" value="SUBMIT">
+</form>
+
+
 <div class="footer">
     <footer class="navbar navbar-fixed-bottom">
         <div class="container-fluid">
