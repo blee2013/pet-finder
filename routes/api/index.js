@@ -6,7 +6,7 @@ const router = require('express').Router();
 // const postRoutes = require('./post-routes.js');
 // const signupRoutes = require('/signup-routes.js');
 const userRoutes = require('./user-routes.js')
-// const animalRoutes = require('./animal-routes.js')
+const animalRoutes = require('./animal-routes.js')
 
 
 
@@ -17,7 +17,7 @@ const userRoutes = require('./user-routes.js')
 // router.use('/post', postRoutes);
 // router.use('/signup', signupRoutes);
 router.use('/user', userRoutes);
-// router.use('/animal', animalRoutes);
-
+//router.use('/animals', animalRoutes);
+// prepended /api/
 
 module.exports = router;

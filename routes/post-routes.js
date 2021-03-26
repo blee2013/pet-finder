@@ -3,23 +3,32 @@ const sequelize = require('../config/connection');
 const { Post, User  } = require('../models');
 const withAuth = require('../utils/auth');
 
+// for posting new image uploaded
+router.post('saveImage', (req, res) => {
+  const fileName = req.files.myFile.name
+  const path = __dirname + '/images'
+ + fileName
+
+ image.mv(path, (error) => {
+   if (error) {
+     console.log(error) 
+     res.writeHead(500, {
+       'Content-Type': 'application/json'
+     })
+     res.end(JSON.stringify({status: 'error', message: error}))
+     return
+   }
+   res.writeHead(200, {
+     'Content-Type': 'application/json'
+   })
+   res.end(JSON.stringify({status: 'success', path: '/img/houses/' + filename}))
+ })
+})
 
 router.get('/', (req, res) => {
   // console.log(req.session);
   res.render('post');
-  // Post.findAll({
 
-  // })
-  //   .then(dbPostData => {
-    
-  //     const posts = dbPostData.map(post => post.get({ plain: true }));
-  //     res.render('post');
-     
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //     res.status(500).json(err);
-  //   });
 });
 
 router.get('/:id', withAuth, (req, res) => {
