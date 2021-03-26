@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
-
+const sequelize = require('../config/connection');
+const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
   console.log(req.session);
@@ -21,12 +21,16 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  // if logged in , redirect to home page
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  res.render('login');
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  });
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 router.get('/post/:id', (req, res) => {
