@@ -12,7 +12,11 @@ async function loginFormHandler(event) {
         password
       }),
       headers: { 'Content-Type': 'application/json' }
-    });
+    })
+
+    .catch(function(err) {
+      console.log(err);
+     })
 
     if (response.ok) {
       document.location.replace('/');
