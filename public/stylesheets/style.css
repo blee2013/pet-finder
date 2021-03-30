@@ -4,6 +4,11 @@
      
 } */
 
+.ddstyle {
+    float: left;
+    z-index: 99;
+}
+
 .video-container {
     position: absolute;
     top: 0;
@@ -14,14 +19,14 @@
     z-index: -2;
 }
 
-header {
+.video {
     min-height: 100vh;
     position: relative;
     display: grid;
     place-items: center;
 }
 
-video::after {
+.video::after {
     content: "";
     position: absolute;
     top: 0;
@@ -36,17 +41,13 @@ body {
    
     
     background-repeat: no-repeat;
-    background-image: url("petsWeb1.jpg");
+    background-image: url("collage.jpg");
     background-position: center center;
     background-attachment: fixed;
    
     background-size: cover;
     
    
-}
-
-#paragraph {
-    margin-top:70rem;
 }
 
 .titleHeader{
@@ -58,7 +59,6 @@ body {
 h1{
     font-size: 4rem;
     color: white;
-
 }
 
 
@@ -68,6 +68,7 @@ h1{
     color: white;
     text-decoration: none;
     margin-right: 1.5rem;
+    cursor: pointer;
 }
 
 .footer{
@@ -122,12 +123,12 @@ input{
     width: 100%;
 }
 
-#logout {
+/* #logout {
     border: none;
     background:none;
     padding:none;
     align-items: center;
-}
+} */
 
 .btn-secondary {
    
