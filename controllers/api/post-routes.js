@@ -141,7 +141,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.get('/:breed', (req, res) => {
+router.get('/breed/:breed', (req, res) => {
   Post.findAll({
     where: {
       id: req.params.breed
@@ -170,7 +170,7 @@ router.get('/:breed', (req, res) => {
     });
 });
 
-router.get('/:age', (req, res) => {
+router.get('/age/:age', (req, res) => {
   Post.findAll({
     where: {
       id: req.params.age
@@ -199,7 +199,7 @@ router.get('/:age', (req, res) => {
     });
 });
 
-router.get('/:gender', (req, res) => {
+router.get('/gender/:gender', (req, res) => {
   Post.findAll({
     where: {
       id: req.params.gender
@@ -228,7 +228,7 @@ router.get('/:gender', (req, res) => {
     });
 });
 // find one by type
-router.get('/:type', (req, res) => {
+router.get('/type/:type', (req, res) => {
     Post.findAll ({
       where: {
         id: req.params.type
