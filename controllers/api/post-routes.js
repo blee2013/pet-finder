@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Pet } = require('../models');
+const { Post } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.post('/create', withAuth, (req, res) => {
+router.post('/', withAuth, (req, res) => {
     console.log(req.body);
     
-    Pet.create(
+    Post.create(
       {
         id: req.body.id,
         name: req.body.name,
@@ -26,7 +26,7 @@ router.post('/create', withAuth, (req, res) => {
     )
       .then(dbPetData => {
         if (!dbPetData) {
-          res.status(404).json({ message: 'No Pet found with this id' });
+          res.status(404).json({ message: 'No Post found with this id' });
           return;
         }
         res.json(dbPetData);
@@ -40,7 +40,7 @@ router.post('/create', withAuth, (req, res) => {
 router.put('/update', withAuth, (req, res) => {
   console.log(req.body);
   
-  Pet.update(
+  Post.update(
     {
       id: req.body.id,
       name: req.body.name,
@@ -60,7 +60,7 @@ router.put('/update', withAuth, (req, res) => {
   )
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404).json({ message: 'No Pet found with this id' });
+        res.status(404).json({ message: 'No Post found with this id' });
         return;
       }
       res.json(dbPetData);
@@ -73,16 +73,14 @@ router.put('/update', withAuth, (req, res) => {
 
 router.delete('/delete/:id', withAuth, (req, res) => {
 
- 
-   
-  Pet.destroy({
+  Post.destroy({
     where: {
       id: req.params.id
     }
   })
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404).json({ message: 'No Pet found with this id' });
+        res.status(404).json({ message: 'No Post found with this id' });
         return;
       }
       res.json(dbPetData);
@@ -95,7 +93,7 @@ router.delete('/delete/:id', withAuth, (req, res) => {
 
 router.get('/',  (req, res) => {
   // console.log(req.session);
-  Pet.findAll({
+  Post.findAll({
     attributes : [
       "id",
       "name",
@@ -115,7 +113,7 @@ router.get('/',  (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Pet.findOne({
+  Post.findOne({
     where: {
       id: req.params.id
     },
@@ -132,7 +130,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404).json({ message: 'No Pet found with this id' });
+        res.status(404).json({ message: 'No Post found with this id' });
         return;
       }
       res.json(dbPetData);
@@ -144,7 +142,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.get('/:breed', (req, res) => {
-  Pet.findOne({
+  Post.findAll({
     where: {
       id: req.params.breed
     },
@@ -161,7 +159,7 @@ router.get('/:breed', (req, res) => {
   })
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404).json({ message: 'No Pet found with this breed' });
+        res.status(404).json({ message: 'No Post found with this breed' });
         return;
       }
       res.json(dbPetData);
@@ -173,7 +171,7 @@ router.get('/:breed', (req, res) => {
 });
 
 router.get('/:age', (req, res) => {
-  Pet.findOne({
+  Post.findAll({
     where: {
       id: req.params.age
     },
@@ -190,7 +188,7 @@ router.get('/:age', (req, res) => {
   })
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404).json({ message: 'No Pet found with this age' });
+        res.status(404).json({ message: 'No Post found with this age' });
         return;
       }
       res.json(dbPetData);
@@ -202,7 +200,7 @@ router.get('/:age', (req, res) => {
 });
 
 router.get('/:gender', (req, res) => {
-  Pet.findOne({
+  Post.findAll({
     where: {
       id: req.params.gender
     },
@@ -219,7 +217,7 @@ router.get('/:gender', (req, res) => {
   })
     .then(dbPetData => {
       if (!dbPetData) {
-        res.status(404).json({ message: 'No Pet found with this gender' });
+        res.status(404).json({ message: 'No Post found with this gender' });
         return;
       }
       res.json(dbPetData);
@@ -231,7 +229,7 @@ router.get('/:gender', (req, res) => {
 });
 // find one by type
 router.get('/:type', (req, res) => {
-    Pet.findOne({
+    Post.findAll ({
       where: {
         id: req.params.type
       },
@@ -248,7 +246,7 @@ router.get('/:type', (req, res) => {
     })
       .then(dbPetData => {
         if (!dbPetData) {
-          res.status(404).json({ message: 'No Pet found with this type' });
+          res.status(404).json({ message: 'No Post found with this type' });
           return;
         }
         res.json(dbPetData);
