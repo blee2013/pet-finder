@@ -8,17 +8,6 @@ const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-<<<<<<< HEAD
-=======
-
-const sequelize = require('./config/connection');
-
-// for file uploading image
-const fileupload = require('express-fileupload')
-
-const session = require('express-session');
-
->>>>>>> feature/file-upload
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const helpers = require('./utils/helpers');
@@ -35,13 +24,8 @@ const sess= {
     })
 };
 
-<<<<<<< HEAD
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-=======
-// for file uploading image
-app.use(fileupload())
->>>>>>> feature/file-upload
 app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -51,12 +35,8 @@ app.use(require('./Routes'));
 // turn on routes
 app.use(routes);
 
-<<<<<<< HEAD
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
-=======
-sequelize.sync({ force: false}).then(() => {
->>>>>>> feature/file-upload
   app.listen(PORT, () => console.log('Now listening'));
 });
 
