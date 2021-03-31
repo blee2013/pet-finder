@@ -5,19 +5,6 @@ const { Post, User, Comment } = require('../models');
 router.get('/', (req, res) => {
   console.log(req.session);
   res.render('homepage');
-  // Post.findAll({
- 
-  // })
-  //   .then(dbPostData => {
-   
-  //     const posts = dbPostData.map(post => post.get({ plain: true }));
-  //     res.render('homepage');
-     
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //     res.status(500).json(err);
-  //   });
 });
 
 router.get('/login', (req, res) => {
@@ -38,28 +25,28 @@ router.get('/post/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: [
-      'id',
-      'title',
-      'article',
-      'created_at',
-      'username',
+    // attributes: [
+    //   'id',
+    //   'title',
+    //   'article',
+    //   'created_at',
+    //   'username',
 
-    ],
-    include: [
-      {
-        model: Comment,
+    // ],
+    // include: [
+    //   {
+    //     model: Comment,
        
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
-        model: User,
+    //     include: {
+    //       model: User,
+    //       attributes: ['username']
+    //     }
+    //   },
+    //   {
+    //     model: User,
       
-      }
-    ]
+    //   }
+    // ]
   })
     .then(dbPostData => {
       console.log(dbPostData)

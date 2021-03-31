@@ -24,6 +24,28 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/:id',  (req, res) => {
+
+  const id = req.params.id;
+  Pet.findOne({
+    where: {
+   
+      id: id
+    },
+  
+  })
+    .then(dbPostData => {
+      const post = dbPostData.get({ plain: true });
+      console.log(dbPostData)
+      res.render('comment', { post: post, id: id, loggedIn: true });
+
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 module.exports = router;
 
 
