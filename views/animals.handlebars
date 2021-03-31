@@ -1,0 +1,189 @@
+
+    <div class="container" id="petCardsContainer">
+        <div class="row" id="cardsCenter">
+            {{#each pets as |pet|}}
+
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover);">
+                <div class="mainflip">
+                    <div class="frontside">
+                        <div class="card" style="width:18rem" id="petCard">
+                            <img class="card-img-top img-fluid" src="{{pet.picture}}" alt="dog pic">
+                            <div class="card-body">
+                                <h3>{{pet.name}}</h3>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card" style="width:18rem" id="petCard">
+                            <div class="card-header">
+                                <h3>{{pet.name}}</h3>
+                                <br>
+                                Breed: {{pet.breed}}
+                                <br>
+                                {{pet.gender}}
+                                <br>
+                                Age: {{pet.age}}
+                            </div>
+                            <div class="card-body">
+
+                                <p>{{pet.description}}</p>
+
+                            </div>
+                            <div class="card-footer">
+                                <a href="mailto:fureverhome@gmail.com" class="btn btn-primary">Click to set up
+                                    meeting!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+<!--example cards  THESE CARDS CAN BE DELETED WHEN THE SEEDS ARE READY-->
+
+
+
+
+{{!-- <div class="container" id="petCardsContainer">
+    <div class="row">
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover);">
+            <div class="mainflip">
+                <div class="frontside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <img class="card-img-top img-fluid" src="assets/Bill.png" alt="Liam pic">
+                        <div class="card-body">
+                            <h3>Bill</h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <div class="card-header">
+                            <h3>Bill</h3>
+                            <br>
+                            Breed: beagle
+                            <br>
+                            Male
+                            <br>
+                            Age: 1
+                        </div>
+                        <div class="card-body">
+
+                            <p>Bill is a cute boy who likes to snuggle and listen to Oasis</p>
+
+                        </div>
+                        <div class="card-footer">
+                            <a href="mailto:fureverhome@gmail.com" class="btn btn-primary">Click to set up meeting!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover);">
+            <div class="mainflip">
+                <div class="frontside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <img class="card-img-top img-fluid" src="assets/Blue.png" alt="Liam pic">
+                        <div class="card-body">
+                            <h3>Blue</h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <div class="card-header">
+                            <h3>Blue</h3>
+                            <br>
+                            Breed: Lab Mix
+                            <br>
+                            Male
+                            <br>
+                            Age: 1
+                        </div>
+                        <div class="card-body">
+
+                            <p>Blue is a cute boy who likes to snuggle and listen to Oasis</p>
+
+                        </div>
+                        <div class="card-footer">
+                            <a href="mailto:fureverhome@gmail.com" class="btn btn-primary">Click to set up meeting!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover);">
+            <div class="mainflip">
+                <div class="frontside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <img class="card-img-top img-fluid" src="assets/Carly.png" alt="Liam pic">
+                        <div class="card-body">
+                            <h3>Carly</h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <div class="card-header">
+                            <h3>Carly</h3>
+                            <br>
+                            Breed: Lab Mix
+                            <br>
+                            Male
+                            <br>
+                            Age: 1
+                        </div>
+                        <div class="card-body">
+
+                            <p>Carly is a cute boy who likes to snuggle and listen to Oasis</p>
+
+                        </div>
+                        <div class="card-footer">
+                            <a href="mailto:fureverhome@gmail.com" class="btn btn-primary">Click to set up meeting!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover);">
+            <div class="mainflip">
+                <div class="frontside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <img class="card-img-top img-fluid" src="assets/Champ.png" alt="Liam pic">
+                        <div class="card-body">
+                            <h3>Champ</h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <div class="card-header">
+                            <h3>Champ</h3>
+                            <br>
+                            Breed: Lab Mix
+                            <br>
+                            Male
+                            <br>
+                            Age: 1
+                        </div>
+                        <div class="card-body">
+
+                            <p>Champ is a cute boy who likes to snuggle and listen to Oasis</p>
+
+                        </div>
+                        <div class="card-footer">
+                            <a href="mailto:fureverhome@gmail.com" class="btn btn-primary">Click to set up meeting!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
