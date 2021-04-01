@@ -26,7 +26,11 @@
   * Sequelize
   
   ## ScreenShot  
+<<<<<<< HEAD
   <img src = ".public/assets/ScreenShot.png"/>
+=======
+  <img src = "./public/assets/ScreenShot.png"/>
+>>>>>>> 86fb378d3ae843bba7fb13620e4d4ab5ade7cb6c
   
   ## Deployed Application
   Link: https://
@@ -34,14 +38,18 @@
   ## Question
   If you have questions, feel free to contact us here:
   
-  Mark Peterson 
+  Mark Peterson
+  
   github Link: https://github.com/mwpx777
 
   Agustin Martinez
+  
   github Link: https://github.com/agustinxmtz
 
   Anthony Martinez
+  
   github Link: https://github.com/Anthonyz28
 
   Brittany Lee
+  
   github Link: https://github.com/blee2013

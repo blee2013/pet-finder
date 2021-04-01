@@ -4,11 +4,14 @@ async function commentFormHandler(event) {
   console.log('button clicked');
 
   const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
-  console.log(comment_text);
+  const pet_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+  console.log(pet_id);
   const post_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
-  console.log("comment" + post_id)
+ 
 
   if (comment_text) {
 
@@ -18,16 +21,16 @@ async function commentFormHandler(event) {
       method: 'POST',
       body: JSON.stringify({
         comment_text,
-        post_id,
+        pet_id,
         
       }),
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    // console.log("this is the comment text" + comment_text)
+    
     if (response.ok) {
-      document.location.reload();
+      // document.location.reload();  TURN THIS BACK ON 
     } else {
       alert(response.statusText);
     }
