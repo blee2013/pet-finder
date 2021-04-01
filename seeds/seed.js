@@ -3,6 +3,7 @@ const { Pet } = require('../models');
 
 const petData = [
     {
+        id:1,
         name: "Bill",
         description: "Bill loves to cuddle and be petted",
         breed: "Lab",
@@ -13,7 +14,8 @@ const petData = [
         // user_id: 1
 
     },
-    {
+    {   
+        id:2,
         name: "Blue",
         description: "Blue likes to fetch tennis balls",
         breed: "Lab",
@@ -24,6 +26,7 @@ const petData = [
 
     },
     {
+        id:3,
         name: "Carly",
         description: "furry",
         breed: "Lab Mix",
@@ -34,6 +37,7 @@ const petData = [
 
     },
     {
+        id:4,
         name: "Champ",
         description: "Loves belly rubs and treats",
         breed: "Lab Mix",
@@ -44,6 +48,7 @@ const petData = [
 
     },
     {
+        id:5,
         name: "Charlie",
         description: "Charlie will shake for treats",
         breed: "Lab Mix",
@@ -54,6 +59,7 @@ const petData = [
 
     },
     {
+        id:6,
         name: "Mandy",
         description: "Mandy was named after the Barry Manilow song",
         breed: "Lab Mix",
@@ -64,6 +70,7 @@ const petData = [
 
     },
     {
+        id: 7,
         name: "Reggie",
         description: "Reggie loves listening to Oasis music",
         breed: "Lab Mix",
@@ -74,6 +81,7 @@ const petData = [
 
     },
     {
+        id:8,
         name: "Ted",
         description: "Ted's full name is Ted 'Theodore' Logan",
         breed: "Lab Mix",
@@ -84,6 +92,7 @@ const petData = [
 
     },
     {
+        id:9,
         name: "Whispy",
         description: "Whispy loves to eat and sleep",
         breed: "Lab Mix",
@@ -94,6 +103,7 @@ const petData = [
 
     },
     {
+        id: 10,
         name: "Zoey",
         description: "Zoey loves to snuggle and sleep under blankets",
         breed: "Lab Mix",

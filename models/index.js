@@ -21,4 +21,4 @@ Comment.belongsTo(User, {
 });
 
 
-module.exports = { User, Pet };
+module.exports = { User, Pet, Comment };

@@ -9,7 +9,7 @@
                 <div class="card" style="width:18rem" id="petCard">
                     <img class="card-img-top img-fluid" src="{{pet.picture}}" alt="dog pic">
                     <div class="card-body">
-                        <h3>{{pet.name}}</h3>
+                        <h3>{{pet.name}} {{pet.id}}</h3>
                         <p class="card-text"></p>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
 
 <div class="container lg-12">
     <div class="comments">
-        {{#each post.Comments}}
+        {{#each pet.Comments}}
         <div class="card">
             <div class="card-header bg-dark">
             </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="card-body">
                 <div> <textarea name="comment-body" style="width:100%" placeholder="Comment here!"></textarea>
-                    <button class="btn btn-secondary" type="submit">submit</button>
+                    <button class="btn btn-secondary" type="submit" id={{pet.id}}>submit</button>
                 </div>
             </div>
         </form>
@@ -54,3 +54,5 @@
 </div>
 
 {{!-- {{/if}} --}}
+
+<script src="/javascript/comment.js"></script>

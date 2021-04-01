@@ -18,35 +18,29 @@ router.get('/:id',  (req, res) => {
     
     })
       .then(dbPetData => {
-       
-        // console.log(dbPetData)
-        // console.log(dbPetData.name)
-        // console.log(dbPetData.picture)
-        // console.log(dbPetData.data.picture ? dbPetData.data.picture : "not data.picture")
-
+        
         res.render('comment', { 
             pet: {
+                
                 picture: ("/" + dbPetData.picture) || "http://placehold.it/200/200",
-                // picture: dbPetData.picture || "http://placehold.it/200/200",
                 name: dbPetData.name,
 
             },
-            post: {
+            comment: {
                 Comments: [
-                    {
-                        comment_text: "This is dummy data",
-                        User: {
-                            username: "Bobblobblob",
-                            createdAt: "2021-03-25T14:45:07.000Z"
-                        }
+                    // {
+                    //     comment_text: "This is dummy data",
+                    //     User: {
+                    //         username: "Bob",
+                    //         createdAt: "2021-03-25T14:45:07.000Z"
+                    //     }
 
-                    }
+                    // }
                 ]
             },
             loggedIn: true
         });
-//   res.send(JSON.stringify(dbPetData, null, 2))
-// res.json(dbPetData);
+
       })
       .catch(err => {
         console.log(err);
