@@ -9,18 +9,7 @@ const sequelize = require('../../config/connection');
 router.get('/', (req, res) => {
   
   Pet.findAll({
-    // attributes: [
-    //   'id',
-    //   'name',
-    //   'description',
-    //   'breed',
-    //   'age',
-    //   'gender',
-    //   'picture',
-
-    // ],
-  
-  })
+      })
     .then(dbPetData => {
       
       const pets = dbPetData.map(pet => pet.get({ plain: true }));
