@@ -26,7 +26,7 @@
   * Sequelize
   
   ## ScreenShot  
-  <img src = "./assets/ScreenShot.png"/>
+  <img src = ".public/assets/ScreenShot.png"/>
   
   ## Deployed Application
   Link: https://
