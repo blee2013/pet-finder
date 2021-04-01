@@ -34,14 +34,18 @@
   ## Question
   If you have questions, feel free to contact us here:
   
-  Mark Peterson 
+  Mark Peterson
+  
   github Link: https://github.com/mwpx777
 
   Agustin Martinez
+  
   github Link: https://github.com/agustinxmtz
 
   Anthony Martinez
+  
   github Link: https://github.com/Anthonyz28
 
   Brittany Lee
+  
   github Link: https://github.com/blee2013
