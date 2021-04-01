@@ -38,16 +38,11 @@
 }
 
 body {
-   
-    
     background-repeat: no-repeat;
-    background-image: url("collage.jpg");
+    background-image: url("collage.jpg"); 
     background-position: center center;
     background-attachment: fixed;
-   
     background-size: cover;
-    
-   
 }
 
 .titleHeader{
