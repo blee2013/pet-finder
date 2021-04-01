@@ -20,5 +20,8 @@ Comment.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
+Comment.belongsTo(Pet, {
+    foreignKey: 'pet_id',
+});
 
 module.exports = { User, Pet, Comment };
