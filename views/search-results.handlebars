@@ -1,0 +1,55 @@
+<div class="container" id="logoContainer">
+    <div class="row">
+        <img src="./assets/FureverHomeLogo.png" style="width:100%" alt="Furever Home Logo">
+    </div>
+    <div class="row" id="currentRoster">
+        <h1>SEARCH RESULTS</h1>
+    </div>
+</div>
+
+<div class="container" id="petCardsContainer">
+
+    <div class="row" id="cardsCenter">
+        {{#each pets as |pet|}}
+
+        <div class="image-flip" ontouchstart="this.classList.toggle('hover);">
+            <div class="mainflip">
+                <div class="frontside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <img class="card-img-top img-fluid" src="{{pet.picture}}" alt="dog pic">
+                        <div class="card-body">
+                            <h3>{{pet.name}}</h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backside">
+                    <div class="card" style="width:18rem" id="petCard">
+                        <div class="card-header">
+                            <h3>{{pet.name}}</h3>
+                            <br>
+                            Breed: {{pet.breed}}
+                            <br>
+                            {{pet.gender}}
+                            <br>
+                            Age: {{pet.age}}
+                        </div>
+                        <div class="card-body">
+
+                            <p>{{pet.description}}</p>
+
+                        </div>
+                         <div class="card-footer">
+                            <a href="/comment/{{pet.id}}" class="btn btn-primary">Click to leave a comment!</a>
+                        </div>
+                        <div class="card-footer">
+                            <a href="mailto:fureverhome@gmail.com" class="btn btn-primary">Click to set up
+                                meeting!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

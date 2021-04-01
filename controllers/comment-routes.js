@@ -28,14 +28,8 @@ router.get('/:id',  (req, res) => {
             },
             comment: {
                 Comments: [
-                    // {
-                    //     comment_text: "This is dummy data",
-                    //     User: {
-                    //         username: "Bob",
-                    //         createdAt: "2021-03-25T14:45:07.000Z"
-                    //     }
-
-                    // }
+                  Comment.comment_text
+                
                 ]
             },
             loggedIn: true
