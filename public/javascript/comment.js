@@ -20,7 +20,7 @@ async function commentFormHandler(event) {
       body: JSON.stringify({
         comment_text,
         user_id:post_id,
-        //pet_id
+        // pet_id: post_id
         
       }),
       headers: {
