@@ -126,6 +126,6 @@ const petData = [
 
 ]
 
-const seedPets = Pet.bulkCreate(petData);
+const seedPets =() => Pet.bulkCreate(petData);
 
 module.exports = seedPets;
