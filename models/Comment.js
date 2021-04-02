@@ -25,7 +25,7 @@ Comment.init(
         //     key: 'id'
         //   }
         // },
-        post_id: {
+        pet_id: {
           type: DataTypes.INTEGER,
           references: {
             model: 'comment',

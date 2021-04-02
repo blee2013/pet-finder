@@ -41,15 +41,9 @@ Pet.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
-        },
+       
+        
+      
     },
     {
         sequelize,
